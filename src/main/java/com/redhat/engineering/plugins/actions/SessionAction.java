@@ -293,7 +293,7 @@ public class SessionAction extends AbstractAction {
     }
 
     private Issue getIssueObject() {
-        IssueService.IssueResult issueResult = issueService.getIssue(getCurrentUser().getDirectoryUser(), getKey());
+        IssueService.IssueResult issueResult = issueService.getIssue(getCurrentUser(), getKey());
         if (!issueResult.isValid()) {
             this.addErrorCollection(issueResult.getErrorCollection());
             return null;
@@ -303,6 +303,6 @@ public class SessionAction extends AbstractAction {
     }
 
     private ApplicationUser getCurrentUser() {
-        return authContext.getUser();
+        return authContext.getLoggedInUser();
     }
 }

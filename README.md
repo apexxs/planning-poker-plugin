@@ -71,3 +71,7 @@ You fill in the name of the group and the users and click on "Create Group" to c
 To configure this plugin, you have to be a jira administrator. If you are an administrator, Click on the cogwheel in the top right corner, then select "System" from the drop down menu. After that, find "Issue Features" category in the left panel and select "Planning Poker". you will be redirected to this page:
 
 ![Configuration](https://raw.githubusercontent.com/VaclavDedik/planning-poker-plugin/master/docs/images/configure_poker.png)
+
+## How to Build Planning Poker Plugin
+
+To build this plugin you need to [install the Atlassian SDK](https://developer.atlassian.com/server/framework/atlassian-sdk/install-the-atlassian-sdk-on-a-linux-or-mac-system/). Then run `atlas-mvn package` to generate the JAR.

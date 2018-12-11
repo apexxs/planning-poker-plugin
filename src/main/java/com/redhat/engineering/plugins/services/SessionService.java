@@ -65,7 +65,7 @@ public class SessionService extends AbstractPokerService {
 
     public Session get(String issueKey) {
         log.info("Get session by issue key: " + issueKey);
-        Issue issue = issueService.getIssue(authContext.getUser().getDirectoryUser(), issueKey).getIssue();
+        Issue issue = issueService.getIssue(authContext.getLoggedInUser(), issueKey).getIssue();
         Properties sessionProps = (Properties) pluginSettings.get(getIssueStoreKey(issue));
         if (sessionProps == null) {
             return null;
